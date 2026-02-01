@@ -2,6 +2,10 @@ our official and ONLY mirrors services and PGP
 
 Glowlinks Clearnet URL 
 https://glowlinks.net/
+https://glowtv.org/
+
+proxy if blocked
+https://lustrous-trifle-b6c1ae.netlify.app/
 
 Glowlinks
 http://glowlinh5msygm5hwqy5uyu5ouey6r4b2uvccfzqo2svugdlvgc4a6ad.onion/
@@ -76,4 +80,5 @@ pEW/4x46YGLSaAir0BY8OkUE
 
 -----END PGP PUBLIC KEY BLOCK-----
         
+
         
