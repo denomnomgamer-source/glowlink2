@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="Onion-Location" content="http://glowlinh5msygm5hwqy5uyu5ouey6r4b2uvccfzqo2svugdlvgc4a6ad.onion/" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GlowLinks | Deepweb Links & GlowTV Private IPTV</title>
-<meta name="description" content="The best collection of Darkweb links and GlowTV IPTV Services - content. Updated daily.">
+    <title>GlowLinks | Deepweb Links | Drug-store & GlowTV Private IPTV</title>
+    <meta name="description" content="The best collection of Darkweb links and GlowTV IPTV Services - content. Updated daily.">
     <link rel="icon" type="image/png" href="the-glow-network.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,10 +29,56 @@
             color: #fff;
             display: flex; flex-direction: column; align-items: center;
             min-height: 100vh; overflow-x: hidden;
-            padding-top: 3rem; /* Space for the alert ticker */
+            padding-top: 3rem; 
         }
 
-        /* Fixed collision: rating moved down to avoid ticker */
+        /* Maintenance Modal Styles */
+        #maintenance-modal {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.95);
+            display: flex; align-items: center; justify-content: center;
+            z-index: 10000;
+            padding: 20px;
+        }
+        .modal-content {
+            background: #111;
+            border: 2px solid var(--glow-red);
+            padding: 40px;
+            max-width: 500px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 0 50px rgba(255, 0, 0, 0.3);
+            position: relative;
+        }
+        .modal-content h2 {
+            font-family: 'Archivo Black', sans-serif;
+            color: var(--glow-red);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        .modal-content p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #ddd;
+            margin-bottom: 30px;
+        }
+        .modal-close-btn {
+            background: var(--glow-red);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-weight: 800;
+            text-transform: uppercase;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .modal-close-btn:hover {
+            transform: scale(1.05);
+            background: #cc0000;
+        }
+
         .rating { 
             position: absolute; 
             top: 4.5rem; 
@@ -61,7 +107,7 @@
         .clickable-feature img { width: 100%; height: auto; display: block; }
         
         .hero { text-align: center; padding: 20px 20px 40px; z-index: 2; width: 100%; max-width: 800px; }
-        h1 { font-family: 'Archivo Black', sans-serif; font-size: clamp(4rem, 15vw, 9rem); text-transform: uppercase; margin: 0; letter-spacing: -4px; line-height: 0.9; background: linear-gradient(to bottom, #fff 30%, #444 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        h1 { font-family: 'Archivo Black', sans-serif; font-size: clamp(4rem, 15vw, 9rem); text-transform: uppercase; margin: 0; letter-spacing: -4px; line-height: 0.9; background: linear-gradient(to bottom, #fff 30%, #444 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; transition: transform 0.1s ease-out; }
         .meta-data { margin: 20px 0; font-weight: 700; font-size: 1rem; color: #888; }
         .meta-data span.match { color: #46d369; margin-right: 15px; }
 
@@ -76,110 +122,89 @@
         .btn-iptv { background: var(--glow-red); color: #fff; padding: 18px 30px; font-size: 1.1rem; font-weight: 800; border-radius: 5px; text-decoration: none; display: flex; align-items: center; gap: 10px; transition: transform 0.2s; border: none; cursor: pointer; }
         .btn-iptv:hover { transform: scale(1.05); background: #cc0000; box-shadow: 0 0 20px rgba(255, 0, 0, 0.4); }
 
-.donation-block {
-        background: linear-gradient(145deg, rgba(20, 20, 20, 0.9), rgba(5, 5, 5, 1));
-        border: 1px solid rgba(255, 0, 0, 0.2);
-        padding: 40px;
-        border-radius: 20px;
-        margin: 50px auto;
-        text-align: left;
-        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9), inset 0 0 20px rgba(255, 0, 0, 0.05);
-        position: relative;
-        overflow: hidden;
-    }
+        .donation-block {
+            background: linear-gradient(145deg, rgba(20, 20, 20, 0.9), rgba(5, 5, 5, 1));
+            border: 1px solid rgba(255, 0, 0, 0.2);
+            padding: 40px;
+            border-radius: 20px;
+            margin: 50px auto;
+            text-align: left;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9), inset 0 0 20px rgba(255, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+            max-width: 600px;
+        }
 
-    /* Subtle red glow behind the title */
-    .donation-title {
-        color: #fff;
-        font-family: 'Archivo Black', sans-serif;
-        text-transform: uppercase;
-        font-size: 1.5rem;
-        margin-bottom: 25px;
-        letter-spacing: 2px;
-        text-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
-    }
+        .donation-title {
+            color: #fff;
+            font-family: 'Archivo Black', sans-serif;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            letter-spacing: 2px;
+            text-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+        }
 
-    .wallet-row {
-        margin-bottom: 20px;
-        padding: 15px;
-        background: rgba(255, 255, 255, 0.03);
-        border-radius: 12px;
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        transition: 0.3s;
-    }
+        .wallet-row {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: 0.3s;
+        }
 
-    .wallet-row:hover {
-        background: rgba(255, 0, 0, 0.05);
-        border-color: rgba(255, 0, 0, 0.3);
-    }
+        .wallet-row:hover {
+            background: rgba(255, 0, 0, 0.05);
+            border-color: rgba(255, 0, 0, 0.3);
+        }
 
-    .wallet-label {
-        color: var(--gold-premium);
-        font-size: 0.8rem;
-        text-transform: uppercase;
-        font-weight: 900;
-        display: block;
-        margin-bottom: 8px;
-    }
+        .wallet-label {
+            color: var(--gold-premium);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            font-weight: 900;
+            display: block;
+            margin-bottom: 8px;
+        }
 
-    .wallet-container {
-        display: flex;
-        gap: 10px;
-    }
+        .wallet-container {
+            display: flex;
+            gap: 10px;
+        }
 
-    .wallet-code {
-        flex-grow: 1;
-        background: #000;
-        padding: 12px 15px;
-        border: 1px solid #222;
-        border-radius: 8px;
-        font-family: 'Courier New', monospace;
-        font-size: 0.85rem;
-        color: #00ff41; /* Matrix green or Gold? Let's go Matrix green for that hacker feel */
-        word-break: break-all;
-        box-shadow: inset 0 2px 10px rgba(0,0,0,0.5);
-    }
+        .wallet-code {
+            flex-grow: 1;
+            background: #000;
+            padding: 12px 15px;
+            border: 1px solid #222;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            color: #00ff41; 
+            word-break: break-all;
+            box-shadow: inset 0 2px 10px rgba(0,0,0,0.5);
+        }
 
-    .copy-btn {
-        background: var(--glow-red);
-        color: #fff;
-        border: none;
-        padding: 0 20px;
-        border-radius: 8px;
-        cursor: pointer;
-        font-size: 0.7rem;
-        font-weight: 900;
-        text-transform: uppercase;
-        transition: 0.2s;
-        box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
-    }
+        .copy-btn {
+            background: var(--glow-red);
+            color: #fff;
+            border: none;
+            padding: 0 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.7rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            transition: 0.2s;
+            box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+        }
 
-    .copy-btn:hover {
-        transform: scale(1.05);
-        filter: brightness(1.2);
-    }
+        .copy-btn:hover {
+            transform: scale(1.05);
+            filter: brightness(1.2);
+        }
 
-    /* Styling for the "Other Cryptos" dropdown */
-    .donation-dropdown summary {
-        color: #888;
-        font-size: 0.9rem;
-        padding: 10px;
-        border-top: 1px solid #222;
-        margin-top: 10px;
-        transition: 0.3s;
-    }
-
-    .donation-dropdown summary:hover {
-        color: #fff;
-    }
-
-    .donation-option {
-        margin-top: 15px;
-        padding-left: 10px;
-        border-left: 2px solid var(--glow-red);
-    }
-
-        /* The RED PGP button */
         .btn-pgp { 
             background: var(--glow-red); 
             color: #fff; 
@@ -196,15 +221,6 @@
             border: none;
         }
         .btn-pgp:hover { background: #cc0000; transform: translateY(-2px); }
-
-        .donation-block { background: rgba(255, 255, 255, 0.05); border: 1px solid #333; padding: 30px; border-radius: 12px; margin: 0 auto; text-align: left; }
-        .donation-title { color: var(--gold-premium); font-family: 'Archivo Black', sans-serif; text-transform: uppercase; font-size: 1.2rem; margin: 0 0 15px; }
-        .wallet-row { margin-bottom: 15px; }
-        .wallet-label { color: var(--gold-premium); font-size: 0.75rem; text-transform: uppercase; font-weight: bold; }
-        .wallet-container { display: flex; gap: 5px; margin-top: 5px; }
-        .wallet-code { flex-grow: 1; background: #000; padding: 10px; border: 1px solid #444; border-radius: 4px; font-family: monospace; font-size: 0.8rem; color: #ccc; word-break: break-all; }
-        .copy-btn { background: #333; color: #fff; border: none; padding: 0 12px; border-radius: 4px; cursor: pointer; font-size: 0.65rem; text-transform: uppercase; font-weight: 800; }
-        .donation-option { margin-top: 15px; }
 
         .alert-ticker {
           position: fixed;
@@ -235,22 +251,64 @@
         }
         @keyframes tickerScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-100%); } }
 
-        .glow-links-banned { margin: 40px 0; width: 80%; max-width: 728px; display: block; }
-        .banned-gif { width: 100%; border-radius: 10px; border: 2px solid #222; transition: all 0.3s; }
-        .banned-gif:hover { border-color: var(--glow-red); box-shadow: 0 0 20px var(--glow-red); transform: scale(1.01); }
+        .banner-wrapper {
+            display: flex !important;
+            flex-direction: row;     
+            justify-content: center;  
+            align-items: center;     
+            gap: 20px;
+            width: 100%;
+            max-width: 1000px;        
+            margin: 40px auto;       
+        }
+
+        .banner-wrapper .glow-links-banned {
+            flex: 1;                  
+            display: block !important;
+            width: auto !important;   
+            max-width: 48%;           
+            margin: 0 !important;     
+        }
+
+        .banned-gif {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid #222;
+            transition: all 0.3s;
+        }
 
         @keyframes pulse-glow { 0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4); } 70% { box-shadow: 0 0 0 15px rgba(255, 255, 255, 0); } 100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); } }
         .footer { margin: 40px 0; color: #333; font-size: 0.7rem; letter-spacing: 2px; text-align: center; }
         
         summary { color: var(--gold-premium); cursor: pointer; font-weight: bold; margin-top: 10px; outline: none; }
+
+        @media (max-width: 600px) {
+            .banner-wrapper {
+                flex-direction: column;
+            }
+            .banner-wrapper .glow-links-banned {
+                max-width: 90%;
+            }
+        }
     </style>
 </head>
 <body>
 
+<!-- Server Migration Alert Modal -->
+<div id="maintenance-modal">
+    <div class="modal-content">
+        <h2>⚠️Alert⚠️</h2>
+        <p>We are currently moving servers to enhance security capacity and dodge takedown attempts. Please note that all <b>.onion mirrors</b> and the link directory may be unstable or offline for approximately the next <b>7 weeks</b>.</p>
+        <p>Use the official Clearnet gateways in the meantime for the best experience. please donate to get the Directory back online stable again ASAP</p>
+        <button class="modal-close-btn" onclick="closeModal()">Understood</button>
+    </div>
+</div>
+
 <div class="alert-ticker">
   <div class="alert-ticker__track">
-    <span class="alert-ticker__item">BE AWARE OF SCAMS, OFFICIAL CLEARNET ADDRESS: https://glowlinks.net/ • Verify, clones are active — bookmark the real gateway.</span>
-    <span class="alert-ticker__item">BE AWARE OF SCAMS, OFFICIAL ONION MIRROR: http://glowprxybcdav3u5zwdjpha4rab2uhj66vyuq6gxg2kfzimqejp2evid.onion • Verify clones are active.</span>
+    <span class="alert-ticker__item">BE AWARE OF SCAMS, OFFICIAL CLEARNET ADDRESSES: https://glowlinks.net/ • https://glowtv.org/ Verify, clones are active — bookmark the real gateway.</span>
+    <span class="alert-ticker__item">SERVER MIGRATION IN PROGRESS: .onion services may be unstable for 7 weeks. Use Clearnet mirrors for stability.</span>
   </div>
 </div>
 
@@ -259,7 +317,7 @@
 <div class="top-nav-zone">
     <div class="zone-label">Featured Global Partners</div>
     <div class="feature-grid" id="shuffle-box">
-        <a href="https://stake.com/?c=ELPw3Qd3" target="_blank" class="clickable-feature"><img src="stake.gif" alt="Stake"></a>
+        <a href="https://stake.us/?c=KN0iPyYF" target="_blank" class="clickable-feature"><img src="stake.gif" alt="Stake"></a>
         <a href="https://r.adbtc.top/4143298" target="_blank" class="clickable-feature"><img src="BTC.gif" alt="BTC"></a>
         <a href="https://stake.com/?c=ELPw3Qd3" target="_blank" class="clickable-feature"><img src="stake1.gif" alt="Stake VIP"></a>
     </div>
@@ -282,23 +340,23 @@
                 ACCESS MIRROR FOR DEEPWEB LINKS
             </summary>
             <div class="mirror-list">
-                <a href="http://glowlinh5msygm5hwqy5uyu5ouey6r4b2uvccfzqo2svugdlvgc4a6ad.onion/">Primary Onion</a>
-                <a href="http://mirrorbe3bbixahkrrbrovdyhuwash67xwoxt2xwia273ryqkwzzu6id.onion/">Mirror 1</a>
-                <a href="http://glowprxybcdav3u5zwdjpha4rab2uhj66vyuq6gxg2kfzimqejp2evid.onion/">Mirror 2</a>
-                <a href="http://mirrord5o2kqc3davlggrx43f5ecd4vvtkbzvykafhbucoixy7lmnkad.onion/">Mirror 3</a>
-                <a href="http://relayylfp7trp6ixinokyuroi2r4n67ldsoxkq4ypoux2lgcijig4pid.onion/">Mirror 4</a>
+                <a href="http://glowlinh5msygm5hwqy5uyu5ouey6r4b2uvccfzqo2svugdlvgc4a6ad.onion/">Primary Onion (Moving)</a>
+                <a href="http://mirrorbe3bbixahkrrbrovdyhuwash67xwoxt2xwia273ryqkwzzu6id.onion/">Mirror 1 (Moving)</a>
+                <a href="http://glowprxybcdav3u5zwdjpha4rab2uhj66vyuq6gxg2kfzimqejp2evid.onion/">Mirror 2 (Moving)</a>
+                <a href="http://mirrord5o2kqc3davlggrx43f5ecd4vvtkbzvykafhbucoixy7lmnkad.onion/">Mirror 3 (Moving)</a>
+                <a href="http://relayylfp7trp6ixinokyuroi2r4n67ldsoxkq4ypoux2lgcijig4pid.onion/">Mirror 4 (Moving)</a>
             </div>
         </details>
 
         <a href="glowtv.html" class="btn-iptv">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5v2h8v-2h5c1.1 0 1.99-.9 1.99-2L23 5c0-1.1-.9-2-2-2zm0 14H3V5h18v12z"/></svg>
-            OR TO BUY IPTV
+            OR TO BUY Private IPTV
         </a>
     </div>
 
     <a href="meds.html" class="btn-iptv" style="margin-top: 15px;">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5v2h8v-2h5c1.1 0 1.99-.9 1.99-2L23 5c0-1.1-.9-2-2-2zm0 14H3V5h18v12z"/></svg>
-        Buy here your "Fun" meds, research chemicals, psychedelics, and more
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h2v-6h-2v6zm0-8h2V7h-2v2z"/></svg>
+        Buy here your "Fun" meds, research chemicals, and more
     </a>
 
    <div class="donation-block">
@@ -357,9 +415,15 @@
     </details>
 </div>
 
-<a href="http://glowlinh5msygm5hwqy5uyu5ouey6r4b2uvccfzqo2svugdlvgc4a6ad.onion/" class="glow-links-banned">
-    <img src="Glowlinks-ad.gif" alt="BANNED" class="banned-gif">
-</a>
+<div class="banner-wrapper">
+    <a href="http://glowlinh5msygm5hwqy5uyu5ouey6r4b2uvccfzqo2svugdlvgc4a6ad.onion/" class="glow-links-banned">
+        <img src="Glowlinks-ad.gif" alt="BANNED" class="banned-gif">
+    </a>
+
+    <a href="meds.html" class="glow-links-banned">
+        <img src="hlmarkt.gif" alt="BANNED" class="banned-gif">
+    </a>
+</div>
 
 <div class="footer">
     GLOW-NETWORK © 2012 - 2026. <br>
@@ -367,22 +431,37 @@
 </div>
 
 <script>
+    function closeModal() {
+        document.getElementById('maintenance-modal').style.display = 'none';
+    }
+
     function copyText(id) {
-        const text = document.getElementById(id).innerText;
-        navigator.clipboard.writeText(text).then(() => {
+        const textElement = document.getElementById(id);
+        const text = textElement.innerText;
+        
+        const textArea = document.createElement("textarea");
+        textArea.value = text;
+        document.body.appendChild(textArea);
+        textArea.select();
+        try {
+            document.execCommand('copy');
             const btn = event.target;
             const originalText = btn.innerText;
             btn.innerText = "COPIED!";
             btn.style.background = "#46d369";
             setTimeout(() => {
                 btn.innerText = originalText;
-                btn.style.background = "#333";
+                btn.style.background = "var(--glow-red)";
             }, 2000);
-        });
+        } catch (err) {
+            console.error('Copy failed', err);
+        }
+        document.body.removeChild(textArea);
     }
 
     const container = document.getElementById('shuffle-box');
     function updateAds() {
+        if(!container) return;
         const ads = Array.from(container.children);
         for (let i = ads.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
@@ -393,8 +472,8 @@
 
     const title = document.getElementById('title');
     document.addEventListener('mousemove', (e) => {
-        const x = (window.innerWidth / 2 - e.pageX) / 30;
-        const y = (window.innerHeight / 2 - e.pageY) / 30;
+        const x = (window.innerWidth / 2 - e.pageX) / 40;
+        const y = (window.innerHeight / 2 - e.pageY) / 40;
         title.style.transform = `translateX(${x}px) translateY(${y}px)`;
     });
 </script>
