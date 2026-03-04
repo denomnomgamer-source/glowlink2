@@ -8,9 +8,14 @@
     <loc>https://glowlinks.net/glowtv</loc>
     <priority>0.8</priority>
   </url>
-      <url>
+    <url>
     <loc>https://glowlinks.net/meds</loc>
-    <priority>0.8</priority>
+    <priority>1.0</priority>
+  </url>
+      <url>
+    <loc>https://glowlinks.net/radio</loc>
+    <priority>1.0</priority>
   </url>
 
 </urlset>
+
