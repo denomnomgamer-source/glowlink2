@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Onion-Location" content="http://glowwavehcdcuh2bn6mzfhexe4wy3dikwur5zjvuywczowqmq7evf5ad.onion/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlowLinks | Glowwave-FM Radio | 24/7 Lossless</title>
+    <meta name="Glowlinks The Glow-Network" content="The official 24/7 radio of the Glow-Network. Zero-Trust prrtocol encrypted.">
+    <link rel="icon" type="image/png" href="the-glow-network.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --glow-red: #ff0000;
+            --deep-red: #8b0000;
+            --gold-premium: #ffcc00;
+            --bg-dark: #050505;
+        }
+
+        body {
+            margin: 0; padding: 0;
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-dark);
+            background-image: 
+                radial-gradient(circle at 50% -20%, rgba(229, 9, 20, 0.2) 0%, transparent 50%),
+                url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+            color: #fff;
+            display: flex; flex-direction: column; align-items: center;
+            min-height: 100vh; overflow-x: hidden;
+            padding-top: 5rem; 
+        }
+
+        .rating { position: absolute; top: 4.5rem; left: 20px; border: 2px solid #fff; padding: 4px 12px; font-size: 1rem; font-weight: 900; letter-spacing: 1px; background: rgba(0,0,0,0.5); z-index: 10; }
+        
+        .hero { text-align: center; padding: 20px; z-index: 2; width: 100%; max-width: 800px; }
+        h1 { font-family: 'Archivo Black', sans-serif; font-size: clamp(3rem, 12vw, 7rem); text-transform: uppercase; margin: 0; letter-spacing: -4px; line-height: 0.9; background: linear-gradient(to bottom, #fff 30%, #444 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; transition: transform 0.1s ease-out; }
+        
+        .radio-deck {
+            background: linear-gradient(145deg, rgba(20, 20, 20, 0.95), rgba(5, 5, 5, 1));
+            border: 1px solid rgba(255, 0, 0, 0.3);
+            padding: 50px;
+            border-radius: 20px;
+            margin: 40px auto;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9), inset 0 0 30px rgba(255, 0, 0, 0.05);
+            max-width: 600px;
+            width: 90%;
+            position: relative;
+        }
+
+        .status-badge {
+            color: var(--gold-premium);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-weight: 900;
+            margin-bottom: 15px;
+            display: block;
+            text-shadow: 0 0 10px rgba(255, 204, 0, 0.4);
+        }
+
+        #glow-player-wrap {
+            margin: 30px 0;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        audio {
+            width: 100%;
+            height: 45px;
+            filter: invert(100%) hue-rotate(180deg) contrast(1.2);
+        }
+
+        .meta-data { margin: 20px 0; font-weight: 700; font-size: 0.9rem; color: #888; }
+        .match { color: #46d369; margin-right: 15px; }
+
+        .btn-pgp { 
+            background: var(--glow-red); 
+            color: #fff; 
+            padding: 12px 25px; 
+            font-size: 0.8rem; 
+            font-weight: 900; 
+            border-radius: 5px; 
+            text-decoration: none; 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 8px; 
+            margin-top: 20px; 
+            transition: 0.3s;
+            border: none;
+            text-transform: uppercase;
+        }
+        .btn-pgp:hover { background: #cc0000; transform: translateY(-2px); box-shadow: 0 0 20px rgba(255, 0, 0, 0.4); }
+
+        .footer { margin: 60px 0 40px; color: #333; font-size: 0.7rem; letter-spacing: 2px; text-align: center; }
+
+        #glow-player-wrap { user-select: none; }
+    </style>
+</head>
+<body oncontextmenu="return false;"> <div class="rating">~TGN Glowwave-FM.</div>
+
+<div class="hero">
+    <h1 id="title">RADIO</h1>
+    <div class="meta-data">
+        <span class="match">LIVE</span> 24/7 Lossless | Bass Optimized Audio | <strong>Bionic-Tank Encrypted</strong>
+    </div>
+</div>
+
+<div class="radio-deck">
+    <span class="status-badge">Now Playing: Liveset</span>
+    
+    <div id="glow-player-wrap">
+        <p style="color: #666; font-size: 0.8rem; margin-bottom: 10px;">Establishing Zero-Trust Tunnel...</p>
+        <div id="audio-target"></div>
+    </div>
+
+    <p style="color:var(--gold-premium); font-size:0.85rem; font-weight: bold; text-align: center; border: 1px solid rgba(216, 200, 160, 0.2); padding: 15px; border-radius: 8px;">
+        ⚠️ NOTICE: This stream is proxied through our secure nodes. Do not share the direct stream link or your IP will be blacklisted.
+    </p>
+
+    <a href="index.html" class="btn-pgp">Return to home</a>
+</div>
+
+<div class="footer">
+    GLOW-NETWORK © 2012 - 2026. <br>
+</div>
+
+<script>
+
+    (function() {
+        const _0x1 = "https://";
+        const _0x2 = "radio.";
+        const _0x3 = "glowlinks";
+        const _0x4 = ".net/";
+        const secure_src = _0x1 + _0x2 + _0x3 + _0x4;
+
+        setTimeout(() => {
+            const target = document.getElementById('audio-target');
+            const player = document.createElement('audio');
+            player.controls = true;
+            player.autoplay = true;
+            player.innerHTML = `<source src="${secure_src}" type="audio/mpeg">`;
+            
+            // Disable right-click specifically on the player
+            player.oncontextmenu = (e) => e.preventDefault();
+            
+            target.innerHTML = '';
+            target.appendChild(player);
+            document.querySelector('#glow-player-wrap p').innerText = "Tunnel Established - Lossless Link Active";
+            document.querySelector('#glow-player-wrap p').style.color = "#46d369";
+        }, 1200);
+    })();
+
+    const title = document.getElementById('title');
+    document.addEventListener('mousemove', (e) => {
+        const x = (window.innerWidth / 2 - e.pageX) / 40;
+        const y = (window.innerHeight / 2 - e.pageY) / 40;
+        title.style.transform = `translateX(${x}px) translateY(${y}px)`;
+    });
+
+    document.onkeydown = function(e) {
+        if(e.keyCode == 123 || (e.ctrlKey && e.shiftKey && e.keyCode == 73) || (e.ctrlKey && e.keyCode == 85)) {
+            return false;
+        }
+    };
+</script>
+</body>
+</html>
