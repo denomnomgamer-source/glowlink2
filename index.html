@@ -32,53 +32,6 @@
             padding-top: 3rem; 
         }
 
-        /* Maintenance Modal Styles */
-        #maintenance-modal {
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.95);
-            display: flex; align-items: center; justify-content: center;
-            z-index: 10000;
-            padding: 20px;
-        }
-        .modal-content {
-            background: #111;
-            border: 2px solid var(--glow-red);
-            padding: 40px;
-            max-width: 500px;
-            text-align: center;
-            border-radius: 15px;
-            box-shadow: 0 0 50px rgba(255, 0, 0, 0.3);
-            position: relative;
-        }
-        .modal-content h2 {
-            font-family: 'Archivo Black', sans-serif;
-            color: var(--glow-red);
-            margin-bottom: 20px;
-            text-transform: uppercase;
-        }
-        .modal-content p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            color: #ddd;
-            margin-bottom: 30px;
-        }
-        .modal-close-btn {
-            background: var(--glow-red);
-            color: white;
-            border: none;
-            padding: 15px 40px;
-            font-weight: 800;
-            text-transform: uppercase;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-        .modal-close-btn:hover {
-            transform: scale(1.05);
-            background: #cc0000;
-        }
-
         .rating { 
             position: absolute; 
             top: 4.5rem; 
@@ -297,21 +250,10 @@
 </head>
 <body>
 
-<!-- Server Migration Alert Modal -->
-<div id="maintenance-modal">
-    <div class="modal-content">
-        <h2>⚠️Alert⚠️</h2>
-        <p>We are done moving servers to enhance security capacity and dodge takedown attempts. All <b>.onion mirrors</b> and the link directory should be back online <b>now</b>.</p>
-        <p>USE <b>.onion mirrors</b> for the full experience (javascript-free of course).</p>
-        <p>The official Clearnet gateways will stay online for the best experience and updates. Thanks for donating, we got the Directory back online stable within 7 days. Y'all did great. Many thanks again, we are 100% back from now.</p>
-        <button class="modal-close-btn" onclick="closeModal()">Understood</button>
-    </div>
-</div>
-
 <div class="alert-ticker">
   <div class="alert-ticker__track">
     <span class="alert-ticker__item">BE AWARE OF SCAMS, OFFICIAL CLEARNET ADDRESSES: https://glowlinks.net/ • https://glowtv.org/ Verify, clones are active — bookmark the real gateway.</span>
-    <span class="alert-ticker__item">SERVER MIGRATION IN PROGRESS: .onion services may be unstable for 7 weeks. Use Clearnet mirrors for stability.</span>
+    <span class="alert-ticker__item">BE AWARE OF SCAMS, OFFICIAL CLEARNET ADDRESSES: https://glowlinks.net/ • https://glowtv.org/ Verify, clones are active — bookmark the real gateway.</span>
   </div>
 </div>
 
@@ -408,8 +350,8 @@
         <div class="donation-option">
             <span class="wallet-label">Nano (XNO):</span>
             <div class="wallet-container">
-                <div class="wallet-code" id="sol">nano_1dq3eh46jertoza3coujpr1h3dhhrwyofc3dk9y8ho5gf1yph74jhxi5b87i</div>
-                <button class="copy-btn" onclick="copyText('sol')">Copy</button>
+                <div class="wallet-code" id="sol-nano">nano_1dq3eh46jertoza3coujpr1h3dhhrwyofc3dk9y8ho5gf1yph74jhxi5b87i</div>
+                <button class="copy-btn" onclick="copyText('sol-nano')">Copy</button>
             </div>
         </div>
 
@@ -439,10 +381,6 @@
 </div>
 
 <script>
-    function closeModal() {
-        document.getElementById('maintenance-modal').style.display = 'none';
-    }
-
     function copyText(id) {
         const textElement = document.getElementById(id);
         const text = textElement.innerText;
