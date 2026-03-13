@@ -125,7 +125,6 @@
         }
         .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(255, 62, 62, 0.4); }
 
-        /* Payment Styles */
         .crypto-dropdowns details { background: #1a1a1a; margin-bottom: 10px; border-radius: 8px; border: 1px solid #333; overflow: hidden; }
         .crypto-dropdowns summary { padding: 15px; cursor: pointer; font-weight: bold; list-style: none; display: flex; justify-content: space-between; transition: 0.3s; }
         .crypto-dropdowns summary:hover { background: rgba(255, 62, 62, 0.1); color: var(--accent); }
@@ -136,7 +135,6 @@
         .donation-option span { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; display: block; margin-bottom: 5px; }
         .donation-option strong { color: var(--success); font-family: monospace; font-size: 0.8rem; word-break: break-all; cursor: pointer; }
 
-        /* Fix the banner size */
 .glow-links-banned {
     display: block;
     width: 100%;
@@ -151,6 +149,30 @@
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     display: block;
+}
+
+.btn-secondary {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--muted);
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text);
+    border-color: var(--gold);
 }
 
         footer { text-align: center; padding: 40px; color: #444; font-size: 0.8rem; }
@@ -239,6 +261,7 @@
             </div>
 
         <div class="card">
+<a href="faq.html" class="btn-secondary">View FAQ & Technical Support</a>
             <label>
                 Email Address
                 <input type="email" id="userEmail" placeholder="year email here" required>
@@ -461,11 +484,11 @@
             <div class="crypto-dropdowns">
                 <details>
                     <summary>Bitcoin (BTC)</summary>
-                    <div class="crypto-item" onclick="copyValue('bc1qenec7xd6d5wah4a9tva5tqt0v8msa3cvplgdt5')">bc1q9hq69zanczs7ngka7dtwnz2pgxgl6449vklkpk</div>
+                    <div class="crypto-item" onclick="copyValue('bc1qdg4m6yh4cgmrsagmzce8hkcn09gh6xhels93rd')">bc1q9hq69zanczs7ngka7dtwnz2pgxgl6449vklkpk</div>
                 </details>
                 <details>
                     <summary>Monero (XMR)</summary>
-                    <div class="crypto-item" onclick="copyValue('82ccNh3Zv3DZaNM1tXeN7daqrjpBNsBnxCnS5andw7f92RLsyXNYXWX9BBKipqps3RG3kRUK5BSKyWwbMxEtY8zkToJPP1h')">82ccNh3Zv3DZaNM1tXeN7daqrjpBNsBnxCnS5andw7f92RLsyXNYXWX9BBKipqps3RG3kRUK5BSKyWwbMxEtY8zkToJPP1h</div>
+                    <div class="crypto-item" onclick="copyValue('82pgDXrEBCmFhPG6ezqJ533mPTSAjqC1V2obA2d5xU2Fd27PGaiNNF3jSvGQJibJPkSP84VrcQrKg84SnqQNWuobLZdfJXb')">82pgDXrEBCmFhPG6ezqJ533mPTSAjqC1V2obA2d5xU2Fd27PGaiNNF3jSvGQJibJPkSP84VrcQrKg84SnqQNWuobLZdfJXb</div>
                 </details>
 
                 <details class="donation-dropdown">
@@ -490,7 +513,6 @@
         <img src="stake.gif" alt="BANNED" class="banned-gif">
     </a>
 
-        <a href="https://www.exoclick.com/signup/?login=tgn"><img src="https://www.exoclick.com/banners/728x90.gif" border="0"></a>
         <footer>&copy; 2026 GLOWNET. VERIFIED ONION SERVICE.</footer>
     </div>
 
@@ -575,6 +597,7 @@
 </body>
 
 </html>
+
 
 
 
