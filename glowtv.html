@@ -143,9 +143,9 @@
 }
 
 .banned-gif {
-    width: 100%; /* This makes it span the whole card width */
+    width: 100%; 
     max-width: 100%; 
-    height: auto; /* Keeps the proportions so it doesn't look stretched and shitty */
+    height: auto; 
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     display: block;
@@ -196,10 +196,10 @@
             </p>
             
             <div class="plan-options">
-                <div class="plan-card" onclick="selectPlan('Standard', '€75')">
+                <div class="plan-card" onclick="selectPlan('Standard', '€60')">
                     <div class="plan-header">
                         <span class="plan-title">Standard Vault</span>
-                        <span class="plan-price">€75/yr</span>
+                        <span class="plan-price">€60/yr</span>
                     </div>
                     <ul class="feature-list">
       <li>full HD Buffer free streaming</li>
@@ -219,10 +219,10 @@
                     <div class="badge">Netflix • Disney+ • Prime • Hulu • Paramount+ • Apple TV+ • Prime Video</div>
                 </div>
 
-                <div class="plan-card" onclick="selectPlan('Premium', '€120')">
+                <div class="plan-card" onclick="selectPlan('Premium', '€100')">
                     <div class="plan-header">
                         <span class="plan-title">Sovereign Premium</span>
-                        <span class="plan-price">€120/yr</span>
+                        <span class="plan-price">€100/yr</span>
                     </div>
                     <ul class="feature-list">
       <li>4K Buffer free streaming</li>
@@ -538,7 +538,7 @@
 
         function copyValue(val) {
             navigator.clipboard.writeText(val);
-            alert("Address copied to clipboard. Don't fuck it up.");
+            alert("Address copied to clipboard.");
         }
 
         function sendOrder() {
@@ -547,7 +547,7 @@
             const device = document.getElementById('deviceType').value;
 
             if(!email || !selectedPlan || !country) {
-                alert("Email, Plan, and Country are required, dummy.");
+                alert("Email, Plan, and Country are required,");
                 return;
             }
 
